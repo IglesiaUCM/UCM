@@ -24,7 +24,7 @@
     </header>
     <main class="page-content__main-content">
         <section class="main-content__image-section">
-            <h2 class="location-section__title">Somos Familia UCM</h2>
+            <h2 class="image-section__title">Somos Familia UCM</h2>
             <div class="image-section__carousel">
                 <div class="carousel__carousel-images">
                     <img src="./src/carousel-images/1.webp" alt="Imagen 1" class="carousel-images__image">
@@ -43,6 +43,8 @@
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                         <path
+                            fill=#fff
+                            stroke=#fff
                             d="M201.4 297.4C188.9 309.9 188.9 330.2 201.4 342.7L361.4 502.7C373.9 515.2 394.2 515.2 406.7 502.7C419.2 490.2 419.2 469.9 406.7 457.4L269.3 320L406.6 182.6C419.1 170.1 419.1 149.8 406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3L201.3 297.3z" />
                     </svg>
                 </button>
@@ -50,13 +52,15 @@
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                         <path
+                            fill=#fff
+                            stroke=#fff
                             d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z" />
                     </svg>
                 </button>
                 <div class="carousel__dots"></div>
             </div>
         </section>
-        <section class="main-content__location-section">
+        <section id="location" class="main-content__location-section">
             <h2 class="location-section__title">¿Cómo llegar?</h2>
             <p class="location-section__description">¡Te esperamos todos los domingos a las 4:00PM!</p>
             <div class="location">
@@ -114,28 +118,10 @@
                 </div>
             </div>
         </section>
-
-        <section id="location" class="main-content__location-section">
-            <h2 class="location-section__title">Ubicación</h2>
-            <div class="location-section__message-container">
-                <p class="message-contaner__text"> ¿Cómo, pues, invocarán a aquel en el cual no han creído? ¿Y cómo
-                    creerán en aquel de quien no han oído? ¿Y cómo oirán sin haber quien les predique? ¿Y cómo
-                    predicarán si no fueren enviados? Como está escrito: ¡Cuán hermosos son los pies de los que anuncian
-                    la paz, de los que anuncian buenas nuevas! Mas no todos obedecieron al evangelio; pues Isaías dice:
-                    Señor, ¿quién ha creído a nuestro anuncio? Así que la fe es por el oír, y el oír, por la palabra de
-                    Dios. (Romanos 10: 14-17).</p>
-                <p class="message-contaner__text">Para conocer y acercarte más a Dios, te invitamos a que nos acompañes
-                    en nuestros cultos, allí podrás oír la palabra de Dios y alabar con todo el corazón a nuestro
-                    creador. ¡Eres bienvenido!</p>
-            </div>
-
-        </section>
-        <section id="social-media" class="main-content__social-section">
+<section id="social-media" class="main-content__social-section">
             <h2 class="social-section__title">Redes Sociales</h2>
-            <p class="social-section__description">Dios nos ha dispuesto como herramientas para llevar a cabo su obra,
-                por ello, estamos para brindarte
-                apoyo en tu vida espiritual y en tu caminar con Dios. A continuación encontrarás nuestros medios
-                digitales de contacto: </p>
+            <p class="social-section__description">¡Te invitamos a que nos sigas en redes, son un medio para acercarte
+                más a Dios!</p>
             <div class="social-section__social-media-containers">
                 <a href="https://www.facebook.com/profile.php?id=100084479266315"
                     class="social-media-containers__facebook-card" target="_blank">
@@ -146,21 +132,29 @@
                     <p class="facebook-card__description">¡Síguenos en nuestras transmisiones por Facebook, y no dudes
                         en contactarnos si lo necesitas, estamos para ayudarte!</p>
                 </a>
-                <div class="social-media-containers__whatsapp-card">
-                    <div class="whatsapp-card__social-media-container">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <div class="social-media-container__whatsapp-numbers">
-                            <span class="whatsapp-numbers__number">+57 313 8596110</span>
-                            <span class="whatsapp-numbers__number">+57 313 4613167</span>
-                        </div>
+                <a href="https://www.facebook.com/profile.php?id=100084479266315"
+                    class="social-media-containers__youtube-card" target="_blank">
+                    <div class="youtube-card__social-media-container">
+                        <i class="fa-brands fa-youtube"></i>
+                        <h class="social-media-container__title" 3>Ucm Iglesia</h3>
                     </div>
-                    <p class="whatsapp-card__description">¡Puedes escribirnos a nuestros números de contacto si
-                        necesitas consejería, oración, o algún otro apoyo espiritual que te podamos brindar!</p>
-                </div>
+                    <p class="youtube-card__description">Próximamente será un medio de mucha bendición... ¡Suscríbete!
+                    </p>
+                </a>
             </div>
         </section>
-
+        
+        <section id="purpose" class="main-content__purpose-section">
+            <div class="purpose-section__purpose-container">
+                <p class="purpose-section__text">¡Acércate al amor de Dios para vivir una vida con propósito!</p>    
+            </div>
+        </section>
+        
     </main>
+    <footer class="footer">
+        <span class="footer__title">Génesis 12:2</span>
+        <span class="footer_paragraph">Y haré de ti una nación grande, y te bendeciré, y engrandeceré tu nombre, y serás bendición</span>
+    </footer>
 </body>
 
 </html>

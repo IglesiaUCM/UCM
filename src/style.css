@@ -7,6 +7,7 @@
     --quaternary-color: #73C6D9;
     --soft-blue: #cfebf1;
     --soft-green: #caffce;
+    --soft-red: #ffcaca;
 }
 
 html {
@@ -76,7 +77,6 @@ body {
 
 }
 
-
 .main-content__invitation-video {
     max-width: 600px;
     width: 100%;
@@ -84,36 +84,6 @@ body {
     border-radius: 16px;
     box-shadow: 0px 0px 8px 0px var(--secondary-color);
     margin-top: 24px;
-}
-
-.main-content__location-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.location-section__title {
-    text-align: center;
-    font-size: 32px;
-    color: var(--primary-color);
-}
-
-.location-section__description {
-    text-align: center;
-    font-weight: 500;
-}
-
-.location-section__message-container {
-    border-radius: 16px;
-    box-shadow: 0px 0px 8px 0px var(--secondary-color);
-    padding: 12px;
-    font-weight: 500;
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
 }
 
 .meetings-information__meeting-container {
@@ -157,7 +127,7 @@ body {
     color: var(--quaternary-color);
     /* color del relleno */
     font-weight: bold;
-    font-size: 32px;
+    font-size: 28px;
     text-shadow:
         -1px -1px 0 var(--black-color),
         1px -1px 0 var(--black-color),
@@ -171,7 +141,7 @@ body {
     color: var(--primary-color);
     /* color del relleno */
     font-weight: bold;
-    font-size: 32px;
+    font-size: 20px;
     text-shadow:
         -1px -1px 0 var(--white-color),
         1px -1px 0 var(--white-color),
@@ -197,6 +167,12 @@ body {
     border-radius: 16px;
 }
 
+.main-content__location-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .location {
     display: flex;
     flex-direction: row;
@@ -205,6 +181,18 @@ body {
     align-items: stretch;
     width: 100%;
 
+}
+
+.location-section__title {
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.location-section__description {
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
 }
 
 .location__map-container {
@@ -291,11 +279,12 @@ body {
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
+    width: 100%;
 }
 
 .contact__title {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     color: var(--primary-color);
 }
 
@@ -344,27 +333,26 @@ body {
     font-weight: 700;
 }
 
+.fa-whatsapp {
+    font-size: 48px;
+    color: #25d366;
+}
 
 .main-content__social-section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
-    padding-top: 100px;
 }
 
 .social-section__title {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     color: var(--primary-color);
 }
 
 .social-section__description {
-    border-radius: 16px;
-    box-shadow: 0px 0px 8px 0px var(--secondary-color);
-    padding: 12px;
     font-weight: 500;
-    font-size: 18px;
     text-align: center;
 }
 
@@ -374,7 +362,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 1rem;
 }
 
@@ -393,6 +381,7 @@ body {
     gap: 0.5rem;
     align-items: center;
     transition: background-color 0.3s ease;
+    background-color: white;
 }
 
 .social-media-containers__facebook-card:hover {
@@ -412,20 +401,18 @@ body {
     color: #3b5998;
 }
 
+.facebook-card__description {
+    flex: 2;
+    font-weight: 600;
+}
+
 .social-media-container__title {
     font-size: 20px;
     color: var(--primary-color);
     font-weight: 700;
 }
 
-.facebook-card__description {
-    flex: 2;
-    font-weight: 600;
-}
-
-/**/
-
-.social-media-containers__whatsapp-card {
+.social-media-containers__youtube-card {
     color: var(--black-color);
     text-decoration: none;
     border-radius: 16px;
@@ -437,43 +424,33 @@ body {
     flex: 1;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     gap: 0.5rem;
     align-items: center;
     transition: background-color 0.3s ease;
+    background-color: white;
 }
 
-.social-media-containers__whatsapp-card:hover {
-    background-color: var(--soft-green);
+.social-media-containers__youtube-card:hover {
+    background-color: var(--soft-red);
 }
 
-.whatsapp-card__social-media-container {
+.youtube-card__social-media-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 0.5rem;
     flex: 1;
-    min-width: 180px;
 }
 
-.fa-whatsapp {
+.fa-youtube {
     font-size: 48px;
-    color: #25d366;
+    color: #e43b3b;
 }
 
-.social-media-container__whatsapp-numbers {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-weight: 700;
-    color: #198a42;
-}
-
-.whatsapp-card__description {
+.youtube-card__description {
     flex: 2;
     font-weight: 600;
 }
-
 
 @media (max-width: 767px) {
     .social-section__social-media-containers {
@@ -488,6 +465,12 @@ body {
     gap: 1rem;
     justify-content: center;
     max-width: 100%;
+}
+
+.image-section__title {
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
 }
 
 .image-section__carousel {
@@ -550,7 +533,70 @@ body {
     right: 10px;
 }
 
-.carousel__button-prev-image svg {
-    color: #fff;
+.carousel__button-prev-image svg,
+.carousel__button-next-image svg {
+    min-width: 32px;
+}
 
+.main-content__purpose-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.purpose-section__purpose-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.purpose-section__text {
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px 0px var(--secondary-color);
+    padding: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+}
+
+.purpose-section__figure {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    justify-content: end;
+}
+
+.purpose-section__img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.purpose-section__caption {
+    text-align: end;
+    width: 100%;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 24px;
+    font-weight: 700;
 }
