@@ -458,3 +458,8 @@ body {
 .carousel__button-next-image {
     right: 10px;
 }
+
+.carousel__button-prev-image svg {
+    color: #fff;
+    
+}
