@@ -471,32 +471,64 @@ body {
     text-align: center;
     font-size: 24px;
     color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
+
+.image-section__title--sm {
+    font-size: 18px;
+}
+
+.image-section__title--text-shadow {
+    text-shadow: 0px 0px 2px var(--tertiary-color);
+}
+
 
 .image-section__carousel {
     position: relative;
     max-width: 100%;
     width: 600px;
-    height: 400px;
-    overflow: hidden;
     margin: auto;
+}
+
+.carousel__viewport {
+    overflow: hidden;
     border-radius: 16px;
     box-shadow: 0px 0px 8px 0px var(--secondary-color);
+    height: 400px;
 }
 
 .carousel__carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%;
     height: 100%;
 }
 
 .carousel-images__image {
     width: 100%;
     min-width: 100%;
-    max-width: 600px;
     height: 400px;
     object-fit: cover;
+}
+
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.carousel__dot.active {
+  background: #333;
 }
 
 .carousel__button-prev-image,
