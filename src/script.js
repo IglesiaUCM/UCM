@@ -34,6 +34,12 @@ carouselImages.style.transform = `translateX(-100%)`;
 
 const getWidth = () => carouselImages.offsetWidth;
 
+const getRealIndex = () => {
+  if (index === 0) return total - 1;
+  if (index === total + 1) return 0;
+  return index - 1;
+};
+
 const updatePosition = () => {
   const width = getWidth();
   carouselImages.style.transform = `translateX(-${index * width}px)`;
@@ -41,7 +47,8 @@ const updatePosition = () => {
 
 const updateDots = () => {
   document.querySelectorAll('.carousel__dot').forEach(dot => dot.classList.remove('active'));
-  dotsContainer.children[index - 1]?.classList.add('active');
+  const realIndex = getRealIndex();
+  dotsContainer.children[realIndex]?.classList.add('active');
 };
 
 const showImage = (i) => {
@@ -49,8 +56,6 @@ const showImage = (i) => {
   if (isAnimating) return; // 👈 BLOQUEA SI ESTÁ EN TRANSICIÓN
   isAnimating = true;
   index = i;
-
-  const allImages = document.querySelectorAll('.carousel-images__image');
 
   if (index >= allImages.length) return;
   if (index < 0) return;
@@ -134,8 +139,6 @@ viewport.addEventListener('touchend', () => {
 ========================= */
 
 carouselImages.addEventListener('transitionend', () => {
-  const allImages = document.querySelectorAll('.carousel-images__image');
-
   // Si estamos en el clone del final (última posición visual)
   if (index === allImages.length - 1) {
     carouselImages.style.transition = 'none';
@@ -149,6 +152,7 @@ carouselImages.addEventListener('transitionend', () => {
     index = total;
     updatePosition();
   }
+  updateDots();
   isAnimating = false; // 👈 LIBERA AQUÍ
 });
 
