@@ -4,6 +4,11 @@ const buttonNextImage = document.querySelector('.carousel__button-next-image');
 const buttonPrevImage = document.querySelector('.carousel__button-prev-image');
 const dotsContainer = document.querySelector('.carousel__dots');
 
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+const swipeThreshold = 50; // distancia mínima para activar cambio
+
 let total = images.length;
 let index = 1;
 const intervalTime = 3000;
@@ -83,6 +88,46 @@ buttonPrevImage.addEventListener('click', () => {
   showImage(index - 1);
   resetAutoplay();
 });
+
+/* =========================
+   SWIPE TÁCTIL
+========================= */
+
+const viewport = carouselImages.parentElement; // contenedor visible
+
+viewport.addEventListener('touchstart', (e) => {
+  if (isAnimating) return;
+
+  startX = e.touches[0].clientX;
+  isDragging = true;
+});
+
+viewport.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+
+  currentX = e.touches[0].clientX;
+});
+
+viewport.addEventListener('touchend', () => {
+  if (!isDragging) return;
+
+  let diff = startX - currentX;
+
+  if (Math.abs(diff) > swipeThreshold) {
+    if (diff > 0) {
+      // Swipe izquierda → siguiente
+      showImage(index + 1);
+    } else {
+      // Swipe derecha → anterior
+      showImage(index - 1);
+    }
+
+    resetAutoplay();
+  }
+
+  isDragging = false;
+});
+
 
 /* =========================
    TRANSICIÓN INFINITA
